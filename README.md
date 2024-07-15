@@ -4,7 +4,9 @@ This repository is dedicated to the consistent practice of Data Structures and A
 
 ## Questions & Solutions
 
-- Q1 HackerRank Plus Minus Question
+### Q1 HackerRank Plus Minus
+
+#### Question
 
 Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with 6 places after the decimal.
 
@@ -75,7 +77,7 @@ Explanation
 There are 3 positive numbers, 2 negative numbers, and 1 zero in the array.
 The proportions of occurrence are positive: 3/6 = 0.500000, negative: 2/6 = 0.333333 and zeros: 1/6 = 0.166667.
 
-- Q1 HackerRank Plus Minus Solution
+#### Solution
 
 ```
 function plusMinus(arr) {
