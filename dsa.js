@@ -22,3 +22,22 @@ function plusMinus(arr) {
     console.log(newArray[1]);
     console.log(newArray[2]);
 }
+
+// Q2 HackerRank Mini-Max Sum
+
+function miniMaxSum(arr) {
+    let minSum = 0
+    let maxSum = 0
+    const sortedArray = arr.sort((a, b) => a - b)
+    const minArray = sortedArray.slice(0, -1)
+    for (let i = 0; i < minArray.length; i++) {
+        minSum += minArray[i]
+    }
+
+    const maxArray = sortedArray.slice(1)
+    for (let i = 0; i < maxArray.length; i++) {
+        maxSum += maxArray[i]
+    }
+
+    console.log(minSum + ' ' + maxSum)
+}
