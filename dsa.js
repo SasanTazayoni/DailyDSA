@@ -1,4 +1,4 @@
-// Q1 HackerRank Plus Minus
+// A1 HackerRank Plus Minus
 
 function plusMinus(arr) {
     let count = {
@@ -23,7 +23,7 @@ function plusMinus(arr) {
     console.log(newArray[2]);
 }
 
-// Q2 HackerRank Mini-Max Sum
+// A2 HackerRank Mini-Max Sum
 
 function miniMaxSum(arr) {
     let minSum = 0
