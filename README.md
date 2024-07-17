@@ -4,6 +4,7 @@ This repository is dedicated to the consistent practice of Data Structures and A
 
 ## Questions
 
+
 ### Q1 HackerRank Plus Minus
 
 Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with 6 places after the decimal.
@@ -75,6 +76,7 @@ STDIN           Function
 There are 3 positive numbers, 2 negative numbers, and 1 zero in the array.
 The proportions of occurrence are positive: 3/6 = 0.500000, negative: 2/6 = 0.333333 and zeros: 1/6 = 0.166667.
 
+
 ### Q2 HackerRank Mini-Max Sum
 
 Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
@@ -129,6 +131,7 @@ Sum everything except 3, the sum is 1 + 2 + 4 + 5 = 12.
 Sum everything except 4, the sum is 1 + 2 + 3 + 5 = 11.
 Sum everything except 5, the sum is 1 + 2 + 3 + 4 = 10.
 Hints: Beware of integer overflow! Use 64-bit Integer.
+
 
 ### Q3 HackerRank Time Conversion
 
