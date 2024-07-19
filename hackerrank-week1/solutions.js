@@ -82,3 +82,50 @@ function breakingRecords(scores) {
 
     return [highScore, lowScore];
 }
+
+// A5 HackerRank Camel Case 4
+
+function processData(input) {
+    const operation = input.charAt(0);
+    const construct = input.charAt(2);
+    let substring = input.substring(4).trim();
+
+    if (operation === 'S') {
+        substring = substring
+            .replace(/([a-z])([A-Z])/g, '$1 $2')
+            .toLowerCase()
+            .replace(/[^a-z\s]/g, '')
+            .trim();
+    } else if (operation === 'C') {
+        if (construct === 'V') {
+            substring = substring
+                .replace(/\s(.)/g, (char) => char.toUpperCase())
+                .replace(/\s+/g, '')
+                .toLowerCase();
+        } else if (construct === 'M') {
+            substring = substring
+                .replace(/\s(.)/g, (char) => char.toUpperCase())
+                .replace(/\s+/g, '')
+                .toLowerCase();
+            substring += '()';
+        } else if (construct === 'C') {
+            substring = substring
+                .replace(/\s(.)/g, (char) => char.toUpperCase())
+                .replace(/\s+/g, '')
+                .replace(/^./, str => str.toUpperCase());
+        }
+    }
+
+    console.log(substring);
+}
+
+processData('S;M;plasticCup()');
+processData('C;V;mobile phone');
+processData('C;C;coffee machine');
+processData('S;C;LargeSoftwareBook');
+processData('C;M;white sheet of paper');
+processData('S;V;pictureFrame');
+processData('S;V;iPad');
+processData('C;M;mouse pad');
+processData('C;C;code swarm');
+processData('S;C;OrangeHighlighter');
