@@ -129,3 +129,19 @@ processData('S;V;iPad');
 processData('C;M;mouse pad');
 processData('C;C;code swarm');
 processData('S;C;OrangeHighlighter');
+
+// A6 HackerRank Divisible Sum Pairs
+
+function divisibleSumPairs(n, k, ar) {
+    let pairs = 0;
+
+    for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+            if ((ar[i] + ar[j]) % k === 0) {
+                pairs ++;
+            }
+        }
+    }
+
+    return pairs;
+}
