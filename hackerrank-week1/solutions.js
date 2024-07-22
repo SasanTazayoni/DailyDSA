@@ -145,3 +145,17 @@ function divisibleSumPairs(n, k, ar) {
 
     return pairs;
 }
+
+// A6 HackerRank Sparse Arrays
+
+function matchingStrings(strings, queries) {
+    const results = [];
+
+    queries.forEach(query => {
+        const count = strings.filter(string => string === query).length;
+
+        results.push(count);
+    });
+
+    return results;
+}
