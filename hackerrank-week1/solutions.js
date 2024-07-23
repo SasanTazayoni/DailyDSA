@@ -146,7 +146,7 @@ function divisibleSumPairs(n, k, ar) {
     return pairs;
 }
 
-// A6 HackerRank Sparse Arrays
+// A7 HackerRank Sparse Arrays
 
 function matchingStrings(strings, queries) {
     const results = [];
@@ -159,3 +159,14 @@ function matchingStrings(strings, queries) {
 
     return results;
 }
+
+// Find median of odd-numbered array length
+
+function findMedian(arr) {
+    arr.sort((a, b) => a - b);
+    const medianIndex = (arr.length - 1) / 2;
+    const median = arr[medianIndex];
+    return median;
+}
+
+arr = [0, 1, 2, 4, 6, 5, 3]
