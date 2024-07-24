@@ -85,38 +85,83 @@ function breakingRecords(scores) {
 
 // A5 HackerRank Camel Case 4
 
+// function processData(input) {
+//     const operation = input.charAt(0);
+//     const construct = input.charAt(2);
+//     let substring = input.substring(4).trim();
+
+//     if (operation === 'S') {
+//         substring = substring
+//             .replace(/([a-z])([A-Z])/g, '$1 $2')
+//             .toLowerCase()
+//             .replace(/[^a-z\s]/g, '')
+//             .trim();
+//     } else if (operation === 'C') {
+//         if (construct === 'V') {
+//             substring = substring
+//                 .replace(/\s(.)/g, (char) => char.toUpperCase())
+//                 .replace(/\s+/g, '')
+//                 .toLowerCase();
+//         } else if (construct === 'M') {
+//             substring = substring
+//                 .replace(/\s(.)/g, (char) => char.toUpperCase())
+//                 .replace(/\s+/g, '')
+//                 .toLowerCase();
+//             substring += '()';
+//         } else if (construct === 'C') {
+//             substring = substring
+//                 .replace(/\s(.)/g, (char) => char.toUpperCase())
+//                 .replace(/\s+/g, '')
+//                 .replace(/^./, str => str.toUpperCase());
+//         }
+//     }
+
+//     console.log(substring);
+// }
+
 function processData(input) {
     const operation = input.charAt(0);
     const construct = input.charAt(2);
     let substring = input.substring(4).trim();
 
     if (operation === 'S') {
-        substring = substring
-            .replace(/([a-z])([A-Z])/g, '$1 $2')
-            .toLowerCase()
-            .replace(/[^a-z\s]/g, '')
-            .trim();
+        let splitString = substring[0];
+
+            for (let i = 1; i < substring.length; i++) {
+                if (substring[i] >= 'A' && substring[i] <= 'Z') {
+                    splitString += ' ';
+                }
+                splitString += substring[i];
+            }
+
+            let result = splitString.toLowerCase().trim();
+
+        if (construct === 'M') {
+            console.log(result.slice(0, -2));
+        } else {
+            console.log(result);
+        }
+
     } else if (operation === 'C') {
+        let combinedString = substring.split(' ');
+
+        let capitalisedWords = combinedString.map((word, index) => {
+            if (index === 0) {
+                return word;
+            }
+            return word[0].toUpperCase() + word.slice(1);
+        });
+
+        const result = capitalisedWords.join('').trim();
+
         if (construct === 'V') {
-            substring = substring
-                .replace(/\s(.)/g, (char) => char.toUpperCase())
-                .replace(/\s+/g, '')
-                .toLowerCase();
+            console.log(result);
         } else if (construct === 'M') {
-            substring = substring
-                .replace(/\s(.)/g, (char) => char.toUpperCase())
-                .replace(/\s+/g, '')
-                .toLowerCase();
-            substring += '()';
+            console.log(result + '()');
         } else if (construct === 'C') {
-            substring = substring
-                .replace(/\s(.)/g, (char) => char.toUpperCase())
-                .replace(/\s+/g, '')
-                .replace(/^./, str => str.toUpperCase());
+            console.log(result.charAt(0).toUpperCase() + result.slice(1));
         }
     }
-
-    console.log(substring);
 }
 
 processData('S;M;plasticCup()');
