@@ -1,11 +1,12 @@
 // A1 HackerRank Lonely Integer
 
 function lonelyinteger(a) {
-    let result = 0;
+    const frequencyMap = a.reduce((acc, num) => {
+        acc[num] = (acc[num] || 0) + 1;
+        return acc;
+    }, {});
 
-    for (const num of a) {
-        result ^= num;
-    }
+    const uniqueArray = Array.from(new Set(a));
 
-    return result;
+    return uniqueArray.filter(num => frequencyMap[num] === 1);
 }
