@@ -29,3 +29,9 @@ function gradingStudents(grades) {
 
     return roundedGrades;
 }
+
+// A3 HackerRank Flipping bits
+
+function flippingBits(n) {
+    return (~n >>> 0);
+}
