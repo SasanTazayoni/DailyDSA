@@ -36,6 +36,8 @@ function flippingBits(n) {
     return (~n >>> 0);
 }
 
+// A4 HackerRank Diagonal Difference
+
 function diagonalDifference(arr) {
     let primaryDiagonal = 0
     let secondaryDiagonal = 0
