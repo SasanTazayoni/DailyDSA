@@ -56,3 +56,17 @@ function diagonalDifference(arr) {
 
     return Math.abs(primaryDiagonal - secondaryDiagonal);
 }
+
+// A5 HackerRank Counting Sort 1
+
+function countingSort(arr) {
+    const frequencyArray = new Array(100).fill(0);
+
+    arr.forEach(num => {
+        if (num >= 0 && num < 100) {
+            frequencyArray[num]++;
+        }
+    });
+
+    return frequencyArray;
+}
