@@ -70,3 +70,19 @@ function countingSort(arr) {
 
     return frequencyArray;
 }
+
+// A6 Counting Valleys
+
+function countingValleys(steps, path) {
+    let startAltitude = 0;
+    let endAltitude = 0;
+    let valleys = 0;
+
+    for (let i = 0; i < steps; i++) {
+        startAltitude = endAltitude;
+        path[i] === 'U' ? endAltitude++ : endAltitude--;
+        if (startAltitude === 0 && endAltitude === -1) valleys++;
+    }
+
+    return valleys;
+}
