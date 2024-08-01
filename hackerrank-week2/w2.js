@@ -1,4 +1,4 @@
-// A1 HackerRank Lonely Integer
+// A1 Lonely Integer
 
 function lonelyinteger(a) {
     const frequencyMap = a.reduce((acc, num) => {
@@ -11,7 +11,7 @@ function lonelyinteger(a) {
     return uniqueArray.filter(num => frequencyMap[num] === 1);
 }
 
-// A2 HackerRank Grading Students
+// A2 Grading Students
 
 function gradingStudents(grades) {
     const roundedGrades = [];
@@ -30,13 +30,13 @@ function gradingStudents(grades) {
     return roundedGrades;
 }
 
-// A3 HackerRank Flipping bits
+// A3 Flipping bits
 
 function flippingBits(n) {
     return (~n >>> 0);
 }
 
-// A4 HackerRank Diagonal Difference
+// A4 Diagonal Difference
 
 function diagonalDifference(arr) {
     let primaryDiagonal = 0
@@ -57,7 +57,7 @@ function diagonalDifference(arr) {
     return Math.abs(primaryDiagonal - secondaryDiagonal);
 }
 
-// A5 HackerRank Counting Sort 1
+// A5 Counting Sort 1
 
 function countingSort(arr) {
     const frequencyArray = new Array(100).fill(0);
@@ -85,4 +85,21 @@ function countingValleys(steps, path) {
     }
 
     return valleys;
+}
+
+// A7 Pangrams
+
+function pangrams(s) {
+    const existingLetters = new Set();
+
+    for (let i = 0; i < s.length; i++) {
+        const letter = s.charAt(i).toLowerCase();
+        if (/[a-z]/.test(letter)) {
+            existingLetters.add(letter);
+        }
+    }
+
+    if (existingLetters.size === 26) {
+        return 'pangram';
+    } else return 'not pangram';
 }

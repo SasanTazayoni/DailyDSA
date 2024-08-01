@@ -1,4 +1,4 @@
-// A1 HackerRank Plus Minus
+// A1 Plus Minus
 
 function plusMinus(arr) {
     let count = {
@@ -23,7 +23,7 @@ function plusMinus(arr) {
     console.log(newArray[2]);
 }
 
-// A2 HackerRank Mini-Max Sum
+// A2 Mini-Max Sum
 
 function miniMaxSum(arr) {
     let minSum = 0;
@@ -42,7 +42,7 @@ function miniMaxSum(arr) {
     console.log(minSum + ' ' + maxSum);
 }
 
-// A3 HackerRank Time Conversion
+// A3 Time Conversion
 
 function timeConversion(s) {
     const hours = parseInt(s.slice(0, 2)); //Extract hours
@@ -60,7 +60,7 @@ function timeConversion(s) {
     return `${formattedHoursString}${minutesAndSeconds}`;
 }
 
-// A4 HackerRank Breaking the Records
+// A4 Breaking the Records
 
 function breakingRecords(scores) {
     const startScore = scores[0];
@@ -83,7 +83,7 @@ function breakingRecords(scores) {
     return [highScore, lowScore];
 }
 
-// A5 HackerRank Camel Case 4
+// A5 Camel Case 4
 
 // function processData(input) {
 //     const operation = input.charAt(0);
@@ -175,7 +175,7 @@ processData('C;M;mouse pad');
 processData('C;C;code swarm');
 processData('S;C;OrangeHighlighter');
 
-// A6 HackerRank Divisible Sum Pairs
+// A6 Divisible Sum Pairs
 
 function divisibleSumPairs(n, k, ar) {
     let pairs = 0;
@@ -191,7 +191,7 @@ function divisibleSumPairs(n, k, ar) {
     return pairs;
 }
 
-// A7 HackerRank Sparse Arrays
+// A7 Sparse Arrays
 
 function matchingStrings(strings, queries) {
     const results = [];
