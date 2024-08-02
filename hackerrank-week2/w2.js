@@ -103,3 +103,23 @@ function pangrams(s) {
         return 'pangram';
     } else return 'not pangram';
 }
+
+// A8 Mars Exploration
+
+function marsExploration(s) {
+    let count = 0;
+    
+    for (let i = 0; i < s.length; i+=3) {
+        if (s.charAt(i) != 'S') {
+            count++;
+        }
+        if (s.charAt(i + 1) != 'O') {
+            count++;
+        }
+        if (s.charAt(i + 2) != 'S') {
+            count++;
+        }
+    }
+      
+    return count;
+}
