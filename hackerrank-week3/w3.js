@@ -12,3 +12,18 @@ function twoArrays(k, A, B) {
 
     return 'YES';
 }
+
+// A2 Subarray Division 2
+
+function birthday(s, d, m) {
+    let chocolates = 0;
+
+    const sum = array => array.reduce((acc, item) => acc + item, 0);
+
+    for (let i = 0; i < s.length - m + 1; i++) {
+        if (sum(s.slice(i, i + m)) === d)
+            chocolates++;
+    }
+
+    return chocolates;
+}
