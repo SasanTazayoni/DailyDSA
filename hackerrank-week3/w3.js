@@ -27,3 +27,19 @@ function birthday(s, d, m) {
 
     return chocolates;
 }
+
+// A3 XOR Strings 3
+
+function xoring(a, b, n) {
+    let result = '';
+    
+    for (let i = 0; i < n; i++) {
+        if (a[i] === b[i]) {
+            result += '0';
+        } else {
+            result += '1';
+        }
+    }
+    
+    return result;
+}
