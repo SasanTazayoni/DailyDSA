@@ -6,11 +6,11 @@ function twoArrays(k, A, B) {
 
     for (let i = 0; i < A.length; i++) {
         if (A[i] + B[i] < k) {
-            return 'NO';
+            return "NO";
         }
     }
 
-    return 'YES';
+    return "YES";
 }
 
 // A2 Subarray Division 2
@@ -18,11 +18,10 @@ function twoArrays(k, A, B) {
 function birthday(s, d, m) {
     let chocolates = 0;
 
-    const sum = array => array.reduce((acc, item) => acc + item, 0);
+    const sum = (array) => array.reduce((acc, item) => acc + item, 0);
 
     for (let i = 0; i < s.length - m + 1; i++) {
-        if (sum(s.slice(i, i + m)) === d)
-            chocolates++;
+        if (sum(s.slice(i, i + m)) === d) chocolates++;
     }
 
     return chocolates;
@@ -31,15 +30,37 @@ function birthday(s, d, m) {
 // A3 XOR Strings 3
 
 function xoring(a, b, n) {
-    let result = '';
-    
+    let result = "";
+
     for (let i = 0; i < n; i++) {
         if (a[i] === b[i]) {
-            result += '0';
+            result += "0";
         } else {
-            result += '1';
+            result += "1";
         }
     }
-    
+
     return result;
+}
+
+// A4 Sales By Match
+
+function sockMerchant(n, ar) {
+    let sockCounts = new Map();
+    let pairs = 0;
+
+    for (let i = 0; i < n; i++) {
+        let color = ar[i];
+        if (sockCounts.has(color)) {
+            sockCounts.set(color, sockCounts.get(color) + 1);
+        } else {
+            sockCounts.set(color, 1);
+        }
+    }
+
+    sockCounts.forEach((count) => {
+        pairs += Math.floor(count / 2);
+    });
+
+    return pairs;
 }

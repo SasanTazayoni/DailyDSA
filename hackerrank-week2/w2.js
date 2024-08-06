@@ -8,7 +8,7 @@ function lonelyinteger(a) {
 
     const uniqueArray = Array.from(new Set(a));
 
-    return uniqueArray.filter(num => frequencyMap[num] === 1);
+    return uniqueArray.filter((num) => frequencyMap[num] === 1);
 }
 
 // A2 Grading Students
@@ -16,7 +16,7 @@ function lonelyinteger(a) {
 function gradingStudents(grades) {
     const roundedGrades = [];
 
-    grades.forEach(grade => {
+    grades.forEach((grade) => {
         if (grade < 38) {
             roundedGrades.push(grade);
         } else if (grade % 5 > 2) {
@@ -33,14 +33,14 @@ function gradingStudents(grades) {
 // A3 Flipping bits
 
 function flippingBits(n) {
-    return (~n >>> 0);
+    return ~n >>> 0;
 }
 
 // A4 Diagonal Difference
 
 function diagonalDifference(arr) {
-    let primaryDiagonal = 0
-    let secondaryDiagonal = 0
+    let primaryDiagonal = 0;
+    let secondaryDiagonal = 0;
 
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length; j++) {
@@ -62,7 +62,7 @@ function diagonalDifference(arr) {
 function countingSort(arr) {
     const frequencyArray = new Array(100).fill(0);
 
-    arr.forEach(num => {
+    arr.forEach((num) => {
         if (num >= 0 && num < 100) {
             frequencyArray[num]++;
         }
@@ -80,7 +80,7 @@ function countingValleys(steps, path) {
 
     for (let i = 0; i < steps; i++) {
         startAltitude = endAltitude;
-        path[i] === 'U' ? endAltitude++ : endAltitude--;
+        path[i] === "U" ? endAltitude++ : endAltitude--;
         if (startAltitude === 0 && endAltitude === -1) valleys++;
     }
 
@@ -100,26 +100,26 @@ function pangrams(s) {
     }
 
     if (existingLetters.size === 26) {
-        return 'pangram';
-    } else return 'not pangram';
+        return "pangram";
+    } else return "not pangram";
 }
 
 // A8 Mars Exploration
 
 function marsExploration(s) {
     let count = 0;
-    
-    for (let i = 0; i < s.length; i+=3) {
-        if (s.charAt(i) != 'S') {
+
+    for (let i = 0; i < s.length; i += 3) {
+        if (s.charAt(i) != "S") {
             count++;
         }
-        if (s.charAt(i + 1) != 'O') {
+        if (s.charAt(i + 1) != "O") {
             count++;
         }
-        if (s.charAt(i + 2) != 'S') {
+        if (s.charAt(i + 2) != "S") {
             count++;
         }
     }
-      
+
     return count;
 }
