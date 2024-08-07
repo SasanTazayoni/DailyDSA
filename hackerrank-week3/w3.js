@@ -64,3 +64,29 @@ function sockMerchant(n, ar) {
 
     return pairs;
 }
+
+// A5 Migratory Birds
+
+function migratoryBirds(arr) {
+    let birdTypes = new Map();
+
+    for (let i = 0; i < arr.length; i++) {
+        let type = arr[i];
+        if (birdTypes.has(type)) {
+            birdTypes.set(type, birdTypes.get(type) + 1);
+        } else {
+            birdTypes.set(type, 1);
+        }
+    }
+
+    const maxValue = Math.max(...Array.from(birdTypes.values()));
+
+    let keysWithMaxValue = [];
+    for (let [key, value] of birdTypes) {
+        if (value === maxValue) {
+            keysWithMaxValue.push(key);
+        }
+    }
+
+    return Math.min(...keysWithMaxValue);
+}
