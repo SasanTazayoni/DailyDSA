@@ -90,3 +90,29 @@ function migratoryBirds(arr) {
 
     return Math.min(...keysWithMaxValue);
 }
+
+// A6 Maximum Perimeter Triangle
+
+function maximumPerimeterTriangle(sticks) {
+    sticks.sort((a, b) => a - b);
+
+    let maxPerimeter = -1;
+    let bestTriangle = [-1];
+
+    for (let i = sticks.length - 3; i >= 0; i--) {
+        const a = sticks[i];
+        const b = sticks[i + 1];
+        const c = sticks[i + 2];
+
+        if (a + b > c) {
+            const perimeter = a + b + c;
+
+            if (perimeter > maxPerimeter) {
+                maxPerimeter = perimeter;
+                bestTriangle = [a, b, c];
+            }
+        }
+    }
+
+    return bestTriangle;
+}
