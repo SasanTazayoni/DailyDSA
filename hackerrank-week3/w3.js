@@ -116,3 +116,24 @@ function maximumPerimeterTriangle(sticks) {
 
     return bestTriangle;
 }
+
+// A7 Zig Zag Sequence
+
+function processData(input) {
+    input.sort((a, b) => a - b);
+
+    let firstArray = [];
+    let secondArray = [];
+
+    for (let i = 0; i < input.length; i++) {
+        if (i % 2 === 0) {
+            firstArray.push(input[i]);
+        } else {
+            secondArray.push(input[i]);
+        }
+    }
+
+    secondArray.sort((a, b) => b - a);
+
+    return [...firstArray, ...secondArray];
+}
