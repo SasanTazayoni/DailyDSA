@@ -137,3 +137,12 @@ function processData(input) {
 
     return [...firstArray, ...secondArray];
 }
+
+// A8 Drawing Book
+
+function pageCount(n, p) {
+    let frontTurns = Math.floor(p / 2);
+    let backTurns = Math.floor(n / 2 - Math.floor(p / 2));
+
+    return Math.min(frontTurns, backTurns);
+}
