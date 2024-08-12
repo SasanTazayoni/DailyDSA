@@ -146,3 +146,21 @@ function pageCount(n, p) {
 
     return Math.min(frontTurns, backTurns);
 }
+
+// Find number of common factors between 2 array inputs
+
+function getTotalX(a, b) {
+    const mutualFactors = [];
+    const maxNumber = Math.max(Math.max(...a), Math.max(...b));
+
+    for (let i = 1; i <= maxNumber; i++) {
+        let isFactorOfA = a.every((num) => i % num === 0);
+        let isFactorOfB = b.every((num) => num % i === 0);
+
+        if (isFactorOfA && isFactorOfB) {
+            mutualFactors.push(i);
+        }
+    }
+
+    return mutualFactors.length;
+}
