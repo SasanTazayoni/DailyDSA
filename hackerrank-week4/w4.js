@@ -14,3 +14,10 @@ function pickingNumbers(a) {
 
     return maxLength;
 }
+
+// A2 Left Rotation
+
+function rotateLeft(d, arr) {
+    const rotatedArray = arr.slice(d).concat(arr.slice(0, d));
+    return rotatedArray;
+}
