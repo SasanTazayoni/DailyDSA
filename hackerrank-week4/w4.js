@@ -68,3 +68,24 @@ function separateNumbers(s) {
 
   console.log("NO");
 }
+
+// A5 Closest Numbers
+
+function closestNumbers(arr) {
+  arr.sort((a, b) => a - b);
+  let minDifference = Infinity;
+  let result = [];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    const difference = arr[i + 1] - arr[i];
+
+    if (difference < minDifference) {
+      minDifference = difference;
+      result = [arr[i], arr[i + 1]];
+    } else if (difference === minDifference) {
+      result.push(arr[i], arr[i + 1]);
+    }
+  }
+
+  return result;
+}
