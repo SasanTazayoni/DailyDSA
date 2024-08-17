@@ -89,3 +89,9 @@ function closestNumbers(arr) {
 
   return result;
 }
+
+// A6 Tower Breakers
+
+function towerBreakers(n, m) {
+  return m === 1 || n % 2 === 0 ? 2 : 1;
+}
