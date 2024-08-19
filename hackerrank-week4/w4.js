@@ -99,13 +99,15 @@ function towerBreakers(n, m) {
 // A7 Minimum Absolute Difference in an Array
 
 function minimumAbsoluteDifference(arr) {
-  let newArray = [];
+  arr.sort((a, b) => a - b);
+  let minDifference = Infinity;
 
   for (let i = 0; i < arr.length - 1; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      newArray.push(Math.abs(arr[i] - arr[j]));
+    let difference = Math.abs(arr[i] - arr[i + 1]);
+    if (difference < minDifference) {
+      minDifference = difference;
     }
   }
 
-  return Math.min(...newArray);
+  return minDifference;
 }
