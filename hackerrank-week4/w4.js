@@ -111,3 +111,28 @@ function minimumAbsoluteDifference(arr) {
 
   return minDifference;
 }
+
+// A8 Caesar Cipher
+
+function caesarCipher(s, k) {
+  let result = "";
+
+  for (let i = 0; i < s.length; i++) {
+    let char = s[i];
+    if (char >= "a" && char <= "z") {
+      let newChar = String.fromCharCode(
+        ((char.charCodeAt(0) - 97 + k) % 26) + 97
+      );
+      result += newChar;
+    } else if (char >= "A" && char <= "Z") {
+      let newChar = String.fromCharCode(
+        ((char.charCodeAt(0) - 65 + k) % 26) + 65
+      );
+      result += newChar;
+    } else {
+      result += char;
+    }
+  }
+
+  return result;
+}
