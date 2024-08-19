@@ -95,3 +95,17 @@ function closestNumbers(arr) {
 function towerBreakers(n, m) {
   return m === 1 || n % 2 === 0 ? 2 : 1;
 }
+
+// A7 Minimum Absolute Difference in an Array
+
+function minimumAbsoluteDifference(arr) {
+  let newArray = [];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      newArray.push(Math.abs(arr[i] - arr[j]));
+    }
+  }
+
+  return Math.min(...newArray);
+}
