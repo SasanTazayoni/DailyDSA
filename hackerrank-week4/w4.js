@@ -136,3 +136,28 @@ function caesarCipher(s, k) {
 
   return result;
 }
+
+// Anagrams
+
+function anagram(s) {
+  if (s.length % 2 !== 0) return -1;
+
+  const [s1, s2] = [s.slice(0, s.length / 2), s.slice(s.length / 2)];
+
+  const count = (str) =>
+    str
+      .split("")
+      .reduce(
+        (acc, char) => acc.set(char, (acc.get(char) || 0) + 1),
+        new Map()
+      );
+
+  const [count1, count2] = [count(s1), count(s2)];
+
+  let changes = 0;
+  for (let [char, freq] of count1) {
+    changes += Math.max(0, freq - (count2.get(char) || 0));
+  }
+
+  return changes;
+}
