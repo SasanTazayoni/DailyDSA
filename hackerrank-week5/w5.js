@@ -49,3 +49,42 @@ function minimumNumber(n, password) {
 
   return Math.max(required, 6 - n);
 }
+
+// A3 Dynamic Array
+
+function dynamicArray(n, queries) {
+  let array = [];
+  let lastAnswer = 0;
+  let answers = [];
+
+  for (let i = 0; i < n; i++) {
+    array[i] = [];
+  }
+
+  const getIndex = (x) => {
+    return (x ^ lastAnswer) % n;
+  };
+
+  const queryOne = (x, y) => {
+    let i = getIndex(x);
+    array[i].push(y);
+  };
+
+  const queryTwo = (x, y) => {
+    let i = getIndex(x);
+    let l = array[i].length;
+    let z = y % l;
+    lastAnswer = array[i][z];
+    answers.push(lastAnswer);
+  };
+
+  for (let q of queries) {
+    if (q[0] === 1) {
+      queryOne(q[1], q[2]);
+    } else if (q[0] === 2) {
+      queryTwo(q[1], q[2]);
+    }
+  }
+
+  return answers;
+}
