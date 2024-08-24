@@ -88,3 +88,17 @@ function dynamicArray(n, queries) {
 
   return answers;
 }
+
+// A4 Smart Number 2
+
+function processData(input) {
+  let factorCount = 0;
+
+  for (let i = 1; i <= input; i++) {
+    if (input % i === 0) {
+      factorCount++;
+    }
+  }
+
+  return factorCount % 2 === 1 ? "YES" : "NO";
+}
