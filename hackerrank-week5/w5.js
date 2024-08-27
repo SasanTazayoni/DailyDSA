@@ -102,3 +102,26 @@ function processData(input) {
 
   return factorCount % 2 === 1 ? "YES" : "NO";
 }
+
+// A5 Missing Numbers
+
+function missingNumbers(arr, brr) {
+  const arrCount = {};
+  for (let num of arr) {
+    arrCount[num] = (arrCount[num] || 0) + 1;
+  }
+
+  const brrCount = {};
+  for (let num of brr) {
+    brrCount[num] = (brrCount[num] || 0) + 1;
+  }
+
+  const missingNumbers = [];
+  for (let num in brrCount) {
+    if (!arrCount[num] || brrCount[num] > arrCount[num]) {
+      missingNumbers.push(parseInt(num));
+    }
+  }
+
+  return missingNumbers.sort((a, b) => a - b);
+}
