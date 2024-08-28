@@ -179,3 +179,22 @@ function sansaXor(arr) {
 
   return result;
 }
+
+// Fibonacci Modified
+
+function fibonacciModified(t1, t2, n) {
+  if (n === 1) return BigInt(t1);
+  if (n === 2) return BigInt(t2);
+
+  let prev2 = BigInt(t1);
+  let prev1 = BigInt(t2);
+  let current = BigInt(0);
+
+  for (let i = 3; i <= n; i++) {
+    current = prev2 + prev1 * prev1;
+    prev2 = prev1;
+    prev1 = current;
+  }
+
+  return current;
+}
