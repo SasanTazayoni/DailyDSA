@@ -125,3 +125,23 @@ function missingNumbers(arr, brr) {
 
   return missingNumbers.sort((a, b) => a - b);
 }
+
+// A6 The Full Counting Sort
+
+function countSort(arr) {
+  const n = arr.length;
+  const maxVal = Math.max(...arr.map((item) => parseInt(item[0])));
+  const buckets = Array.from({ length: maxVal + 1 }, () => []);
+
+  for (let i = 0; i < n; i++) {
+    const index = parseInt(arr[i][0]);
+    const value = i < n / 2 ? "-" : arr[i][1];
+    buckets[index].push(value);
+  }
+
+  const result = [];
+  for (const bucket of buckets) {
+    result.push(...bucket);
+  }
+  console.log(result.join(" "));
+}
