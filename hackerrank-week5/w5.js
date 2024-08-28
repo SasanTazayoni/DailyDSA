@@ -163,3 +163,19 @@ function gridChallenge(grid) {
 
   return "YES";
 }
+
+// A8 Sansa and XOR
+
+function sansaXor(arr) {
+  const n = arr.length;
+  let result = 0;
+
+  for (let i = 0; i < n; i++) {
+    const totalSubarrays = (i + 1) * (n - i);
+    if (totalSubarrays % 2 === 1) {
+      result ^= arr[i];
+    }
+  }
+
+  return result;
+}
