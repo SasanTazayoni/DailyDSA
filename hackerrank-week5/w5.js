@@ -145,3 +145,21 @@ function countSort(arr) {
   }
   console.log(result.join(" "));
 }
+
+// A7 Grid Challenge
+
+function gridChallenge(grid) {
+  const n = grid.length;
+
+  grid = grid.map((row) => row.split("").sort().join(""));
+
+  for (let col = 0; col < n; col++) {
+    for (let row = 1; row < n; row++) {
+      if (grid[row][col] < grid[row - 1][col]) {
+        return "NO";
+      }
+    }
+  }
+
+  return "YES";
+}
