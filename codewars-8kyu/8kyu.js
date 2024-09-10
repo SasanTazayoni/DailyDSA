@@ -131,3 +131,65 @@ function century(year) {
 function litres(time) {
   return Math.floor(time / 2);
 }
+
+// 21 - Convert number to reversed array of digits
+
+function digitize(n) {
+  return Array.from(String(n), Number).reverse();
+}
+
+// 22 - Returning Strings
+
+function greet(name) {
+  return `Hello, ${name} how are you doing today?`;
+}
+
+// 23 - Function 1 - hello world
+
+function greet() {
+  return "hello world!";
+}
+
+// 24 - Opposites Attract
+
+function lovefunc(flower1, flower2) {
+  return flower1 % 2 !== flower2 % 2;
+}
+
+// 25 - A Needle in the Haystack
+
+function findNeedle(haystack) {
+  return `found the needle at position ${haystack.indexOf("needle")}`;
+}
+
+// 26 - Is n divisible by x and y?
+
+function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0;
+}
+
+// 27 - Beginner - Lost Without a Map
+
+function maps(x) {
+  return x.map((item) => item * 2);
+}
+
+// 28 - Beginner Series #1 School Paperwork
+
+function paperwork(n, m) {
+  return n > 0 && m > 0 ? n * m : 0;
+}
+
+// 29 - Convert a Boolean to a String
+
+function booleanToString(b) {
+  return b.toString();
+}
+
+// 30 - Are You Playing Banjo?
+
+function areYouPlayingBanjo(name) {
+  return `${name} ${
+    name[0].toLowerCase() === "r" ? "plays" : "does not play"
+  } banjo`;
+}
