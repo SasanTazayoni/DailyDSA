@@ -193,3 +193,84 @@ function areYouPlayingBanjo(name) {
     name[0].toLowerCase() === "r" ? "plays" : "does not play"
   } banjo`;
 }
+
+// 31 - Sum Arrays
+
+function sum(numbers) {
+  return numbers.length === 0 ? 0 : numbers.reduce((acc, num) => acc + num, 0);
+}
+
+// 32 - Beginner Series #2 Clock
+
+function past(h, m, s) {
+  return 1000 * (h * 3600 + m * 60 + s);
+}
+
+// 33 - Calculate average
+
+function calculateAverage(array) {
+  return array.length === 0
+    ? 0
+    : array.reduce((acc, num) => acc + num, 0) / array.length;
+}
+
+// 34 - How good are you really?
+
+function betterThanAverage(classPoints, yourPoints) {
+  return (
+    yourPoints >
+    classPoints.reduce((acc, num) => acc + num, 0) / classPoints.length
+  );
+}
+
+// 35 - Invert values
+
+function invert(array) {
+  return array.map((item) => -item);
+}
+
+// 36 - Simple multiplication
+
+function simpleMultiplication(number) {
+  return number % 2 === 0 ? number * 8 : number * 9;
+}
+
+// 37 - Count of positives / sum of negatives
+
+function countPositivesSumNegatives(input) {
+  if (!input || input.length === 0) return [];
+
+  let positiveCount = 0;
+  let negativeSum = 0;
+
+  input.forEach((item) => {
+    if (item > 0) {
+      positiveCount++;
+    } else if (item < 0) {
+      negativeSum += item;
+    }
+  });
+
+  return [positiveCount, negativeSum];
+}
+
+// 38 - Fake Binary
+
+function fakeBin(x) {
+  return x
+    .split("")
+    .map((digit) => (digit < 5 ? "0" : "1"))
+    .join("");
+}
+
+// 39 - MakeUpperCase
+
+function makeUpperCase(str) {
+  return str.toUpperCase();
+}
+
+// 40 - You only need one - Beginner
+
+function check(a, x) {
+  return a.includes(x);
+}
