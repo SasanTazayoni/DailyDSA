@@ -274,3 +274,84 @@ function makeUpperCase(str) {
 function check(a, x) {
   return a.includes(x);
 }
+
+// 41 - Calculate BMI
+
+function bmi(weight, height) {
+  const bmiValue = weight / (height * height);
+  return bmiValue <= 18.5
+    ? "Underweight"
+    : bmiValue <= 25.0
+    ? "Normal"
+    : bmiValue <= 30.0
+    ? "Overweight"
+    : "Obese";
+}
+
+// 42 - Sentence Smash
+
+function smash(words) {
+  return words.join(" ");
+}
+
+// 43 - Beginner - Reduce but Grow
+
+function grow(x) {
+  return x.reduce((a, b) => a * b, 1);
+}
+
+// 44 - Reversed sequence
+
+const reverseSeq = (n) => {
+  let result = [];
+  for (let i = n; i > 0; i--) {
+    result.push(i);
+  }
+  return result;
+};
+
+// 45 - Is he gonna survive?
+
+function hero(bullets, dragons) {
+  return bullets >= dragons * 2;
+}
+
+// 46 - DNA to RNA Conversion
+
+function DNAtoRNA(dna) {
+  return dna.replace(/T/g, "U");
+}
+
+// 47 - Will you make it?
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return mpg * fuelLeft >= distanceToPump;
+};
+
+// 48 - Count by X
+
+function countBy(x, n) {
+  let z = [];
+
+  for (let i = 1; i <= n; i++) {
+    z.push(i * x);
+  }
+
+  return z;
+}
+
+// 49 - You Can't Code Under Pressure #1
+
+function doubleInteger(i) {
+  return i * 2;
+}
+
+// 50 - If you can't sleep, just count sheep!!
+
+function countSheep(n) {
+  let result = "";
+  for (let i = 1; i <= n; i++) {
+    result += `${i} sheep...`;
+  }
+  return result;
+}
