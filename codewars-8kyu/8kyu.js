@@ -355,3 +355,149 @@ function countSheep(n) {
   }
   return result;
 }
+
+// 51 - Convert a string to an array
+
+function stringToArray(string) {
+  return string.split(" ");
+}
+
+// 52 - Find Maximum and Minimum Values of a List
+
+const min = function (list) {
+  return Math.min(...list);
+};
+
+const max = function (list) {
+  return Math.max(...list);
+};
+
+// 53 - Jenny's secret message
+
+function greet(name) {
+  return "Hello, " + (name == "Johnny" ? "my love" : name) + "!";
+}
+
+// 54 - Reversed Words
+
+function reverseWords(str) {
+  return str.split(" ").reverse().join(" ");
+}
+
+// 55 - Total amount of points
+
+function points(games) {
+  return games.reduce((acc, cur) => {
+    return acc + cur[0] > cur[2] ? 3 : current[0] === current[2] ? 1 : 0;
+  }, 0);
+}
+
+// 56 - Array plus array
+
+function arrayPlusArray(arr1, arr2) {
+  return [...arr1, ...arr2].reduce((acc, cur) => acc + cur, 0);
+}
+
+// 57 - Grasshopper - Grade book
+
+function getGrade(s1, s2, s3) {
+  const average = (s1 + s2 + s3) / 3;
+  return average >= 90
+    ? "A"
+    : average >= 80
+    ? "B"
+    : average >= 70
+    ? "C"
+    : average >= 60
+    ? "D"
+    : "F";
+}
+
+// 58 - Sum without highest and lowest number
+
+function sumArray(array) {
+  return array
+    ? array
+        .sort((a, b) => a - b)
+        .slice(1, -1)
+        .reduce((acc, cur) => acc + cur, 0)
+    : 0;
+}
+
+// 59 - Area or Perimeter
+
+const areaOrPerimeter = function (l, w) {
+  return l === w ? l * l : 2 * l + 2 * w;
+};
+
+// 60 - Grasshopper - Personalized Message
+
+function greet(name, owner) {
+  return "Hello " + (name === owner ? "boss" : "guest");
+}
+
+// 61 - Get the mean of an array
+
+function getAverage(marks) {
+  return Math.floor(marks.reduce((acc, cur) => acc + cur, 0) / marks.length);
+}
+
+// 62 - Sum Mixed Array
+
+function sumMix(x) {
+  return x.reduce((acc, cur) => acc + parseInt(cur), 0);
+}
+
+// 63 - Transportation on vacation
+
+function rentalCarCost(d) {
+  return 40 * d + (d >= 7 ? -50 : d >= 3 ? -20 : 0);
+}
+
+// 64 - Remove exclamation marks
+
+function removeExclamationMarks(s) {
+  return s.split("!").join("");
+}
+
+// 65 - The Feast of Many Beasts
+
+function feast(beast, dish) {
+  return (
+    beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+  );
+}
+
+// 66 - Quarter of the year
+
+const quarterOf = (month) => {
+  return Math.ceil(month / 3);
+};
+
+// 67 - Double Char
+
+function doubleChar(str) {
+  return str
+    .split("")
+    .map((char) => char + char)
+    .join("");
+}
+
+// 68 - Count the Monkeys!
+
+const monkeyCount = (n) => [...Array(n).keys()].map((i) => i + 1);
+
+// 69 - Thinkful - Logic Drills: Traffic light
+
+const updateLight = (current) =>
+  ({
+    green: "yellow",
+    yellow: "red",
+    red: "green",
+  }[current]);
+
+// 70 - L1: Set Alarm
+
+function setAlarm(employed, vacation) {
+  return employed && !vacation;
+}
