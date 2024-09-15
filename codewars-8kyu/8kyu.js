@@ -501,3 +501,68 @@ const updateLight = (current) =>
 function setAlarm(employed, vacation) {
   return employed && !vacation;
 }
+
+// 71 - Do I get a bonus?
+
+function bonusTime(salary, bonus) {
+  return "£" + salary * (bonus ? 10 : 1);
+}
+
+// 72 - Removing Elements
+
+function removeEveryOther(arr) {
+  return arr.filter((item, index) => index % 2 === 0);
+}
+
+// 73 - Third Angle of a Triangle
+
+function otherAngle(a, b) {
+  return 180 - a - b;
+}
+
+// 74 - Will there be enough space?
+
+function enough(cap, on, wait) {
+  return Math.max(wait + on - cap, 0);
+}
+
+// 75 - Beginner Series #4 Cockroach
+
+function cockroachSpeed(s) {
+  return Math.floor((s * 100000) / 3600);
+}
+
+// 76 - Keep up the hoop
+
+function hoopCount(n) {
+  return n >= 10
+    ? "Great, now move on to tricks"
+    : "Keep at it until you get it";
+}
+
+// 77 - Grasshopper - Check for factor
+
+function checkForFactor(base, factor) {
+  return base % factor === 0;
+}
+
+// 78 - All Star Code Challenge #18
+
+function strCount(str, letter) {
+  return str.split(letter).length - 1;
+}
+
+// 79 - Twice as old
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - 2 * sonYearsOld);
+}
+
+// 80 - Find the first non-consecutive number
+
+function firstNonConsecutive(arr) {
+  const result = arr.find(
+    (value, index) => index > 0 && value !== arr[index - 1] + 1
+  );
+  return result === undefined ? null : result;
+}
