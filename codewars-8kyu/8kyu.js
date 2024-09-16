@@ -566,3 +566,94 @@ function firstNonConsecutive(arr) {
   );
   return result === undefined ? null : result;
 }
+
+// 81 - altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+
+String.prototype.toAlternatingCase = function () {
+  return this.split("")
+    .map((char) => {
+      if (char === char.toLowerCase()) {
+        return char.toUpperCase();
+      }
+      return char.toLowerCase();
+    })
+    .join("");
+};
+
+// 82 - Find numbers which are divisible by given number
+
+function divisibleBy(numbers, divisor) {
+  return numbers.filter((number) => number % divisor === 0);
+}
+
+// 83 - Volume of a Cuboid
+
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+    return length * width * height;
+  }
+}
+
+// 84 - Price of Mangoes
+
+function mango(quantity, price) {
+  return quantity * price - Math.floor(quantity / 3) * price;
+}
+
+// 85 - Find Nearest square number
+
+function nearestSq(n) {
+  return Math.round(Math.sqrt(n)) ** 2;
+}
+
+// 86 - Convert to Binary
+
+function toBinary(n) {
+  return parseInt(n.toString(2), 10);
+}
+
+// 87 - Printing Array elements with Comma delimiters
+
+function printArray(array) {
+  return array.join();
+}
+
+// 88 - Welcome!
+
+function greet(language) {
+  const greetings = {
+    english: "Welcome",
+    czech: "Vitejte",
+    danish: "Velkomst",
+    dutch: "Welkom",
+    estonian: "Tere tulemast",
+    finnish: "Tervetuloa",
+    flemish: "Welgekomen",
+    french: "Bienvenue",
+    german: "Willkommen",
+    irish: "Failte",
+    italian: "Benvenuto",
+    latvian: "Gaidits",
+    lithuanian: "Laukiamas",
+    polish: "Witamy",
+    spanish: "Bienvenido",
+    swedish: "Valkommen",
+    welsh: "Croeso",
+  };
+
+  const normalizedLanguage = language.toLowerCase();
+
+  return greetings[normalizedLanguage] || greetings.english;
+}
+
+// 89 - Grasshopper - Terminal game move function
+
+function move(position, roll) {
+  return position + roll * 2;
+}
+
+// 90 - Exclusive "or" (xor) Logical Operator
+
+function xor(a, b) {
+  return (a || b) && !(a && b);
+}
