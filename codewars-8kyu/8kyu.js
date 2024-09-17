@@ -657,3 +657,76 @@ function move(position, roll) {
 function xor(a, b) {
   return (a || b) && !(a && b);
 }
+
+// 91 - Grasshopper - Debug sayHello
+
+function sayHello(name) {
+  return `Hello, ${name}`;
+}
+
+// 92 - Grasshopper - Combine strings
+
+function combineNames(firstName, lastName) {
+  return `${firstName} ${lastName}`;
+}
+
+// 93 - Geometry Basics: Circle Area in 2D
+
+function circleArea(circle) {
+  return Math.PI * Math.pow(circle.radius, 2);
+}
+
+// 94 - Reversing Words in a String
+
+function reverse(string) {
+  return string.split(" ").reverse().join(" ");
+}
+
+// 95 - validate code with simple regex
+
+function validateCode(code) {
+  return /^[123]/.test(code);
+}
+
+// 96 - Simple Fun #352: Reagent Formula
+
+function isValid(formula) {
+  return (
+    !(formula.includes(1) && formula.includes(2)) &&
+    !(formula.includes(3) && formula.includes(4)) &&
+    formula.includes(5) === formula.includes(6) &&
+    (formula.includes(7) || formula.includes(8))
+  );
+}
+
+// 97 - noobCode 02: TRICKY QUESTIONS (primitives and operator precedence)
+
+function greaterThanLessThan(a, b, c) {
+  return a < b < c;
+}
+
+// 98 - Remove duplicates from list
+
+function distinct(a) {
+  return [...new Set(a)];
+}
+
+// 99 - Grasshopper - Terminal game combat function
+
+function combat(health, damage) {
+  return Math.max(0, health - damage);
+}
+
+// 100 - Grader
+
+function grader(score) {
+  return score > 1 || score < 0.6
+    ? "F"
+    : score >= 0.9
+    ? "A"
+    : score >= 0.8
+    ? "B"
+    : score >= 0.7
+    ? "C"
+    : "D";
+}
