@@ -730,3 +730,97 @@ function grader(score) {
     ? "C"
     : "D";
 }
+
+// 101 - I love you, a little , a lot, passionately ... not at all
+
+function howMuchILoveYou(nbPetals) {
+  const phrases = [
+    "I love you",
+    "a little",
+    "a lot",
+    "passionately",
+    "madly",
+    "not at all",
+  ];
+
+  return phrases[(nbPetals - 1) % 6];
+}
+
+// 102 - Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+
+function remove(string) {
+  return string.replace(/!/g, "") + "!";
+}
+
+// 103 - Get Planet Name By ID
+
+function getPlanetName(id) {
+  return {
+    1: "Mercury",
+    2: "Venus",
+    3: "Earth",
+    4: "Mars",
+    5: "Jupiter",
+    6: "Saturn",
+    7: "Uranus",
+    8: "Neptune",
+  }[id];
+}
+
+// 104 - Parse nice int from char problem
+
+function getAge(inputString) {
+  return parseInt(inputString);
+}
+
+// 105 - Correct the mistakes of the character recognition software
+
+function correct(string) {
+  const corrections = { 5: "S", 0: "O", 1: "I" };
+  return [...string].map((char) => corrections[char] || char).join("");
+}
+
+// 106 - Switch it Up!
+
+function switchItUp(number) {
+  return {
+    0: "Zero",
+    1: "One",
+    2: "Two",
+    3: "Three",
+    4: "Four",
+    5: "Five",
+    6: "Six",
+    7: "Seven",
+    8: "Eight",
+    9: "Nine",
+  }[number];
+}
+
+// 107 - Cat years, Dog years
+
+const humanYearsCatYearsDogYears = function (humanYears) {
+  return [
+    humanYears,
+    humanYears === 1 ? 15 : humanYears === 2 ? 24 : 24 + (humanYears - 2) * 4,
+    humanYears === 1 ? 15 : humanYears === 2 ? 24 : 24 + (humanYears - 2) * 5,
+  ];
+};
+
+// 108 - Is it even?
+
+function testEven(n) {
+  return n % 2 === 0;
+}
+
+// 109 - Is it a palindrome?
+
+function isPalindrome(x) {
+  return x.toLowerCase().split("").reverse().join("") === x.toLowerCase();
+}
+
+// 110 - Powers of 2
+
+function powersOfTwo(n) {
+  return [...Array(n + 1)].map((number, i) => 2 ** i);
+}
