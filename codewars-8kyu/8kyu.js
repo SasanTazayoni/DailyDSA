@@ -822,5 +822,225 @@ function isPalindrome(x) {
 // 110 - Powers of 2
 
 function powersOfTwo(n) {
-  return [...Array(n + 1)].map((number, i) => 2 ** i);
+  return [...Array(n + 1).keys()].map((i) => 2 ** i);
+}
+
+// 111 - What is between?
+
+function between(a, b) {
+  return [...Array(b - a + 1).keys()].map((i) => i + a);
+}
+
+// 112 - Sum The Strings
+
+function sumStr(a, b) {
+  return String(Number(a) + Number(b));
+}
+
+// 113 - Count Odd Numbers below n
+
+function oddCount(n) {
+  return Math.floor(n / 2);
+}
+
+// 114 - Grasshopper - Messi goals function
+
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}
+
+// 115 - Difference of Volumes of Cuboids
+
+function findDifference(a, b) {
+  return Math.abs(
+    a.reduce((acc, val) => acc * val) - b.reduce((acc, val) => acc * val)
+  );
+}
+
+// 116 - Student's Final Grade
+
+function finalGrade(exam, projects) {
+  return exam > 90 || projects > 10
+    ? 100
+    : exam > 75 && projects > 4
+    ? 90
+    : exam > 50 && projects > 1
+    ? 75
+    : 0;
+}
+
+// 117 - Sort and Star
+
+function twoSort(s) {
+  return s.sort()[0].split("").join("***");
+}
+
+// 118 - Training JS #7: if..else and ternary operator
+
+function saleHotdogs(n) {
+  return n * (n < 5 ? 100 : n < 10 ? 95 : 90);
+}
+
+// 119 - Function 2 - squaring an argument
+
+function square(n) {
+  return n ** 2;
+}
+
+// 120 - To square(root) or not to square(root)
+
+function squareOrSquareRoot(array) {
+  return array.map((item) => {
+    return Number.isInteger(Math.sqrt(item)) ? Math.sqrt(item) : item ** 2;
+  });
+}
+
+// 121 - Is the string uppercase?
+
+String.prototype.isUpperCase = function () {
+  return (
+    this.length === 0 ||
+    this.split("").every((char) => char === char.toUpperCase())
+  );
+};
+
+// 122 - Unfinished Loop - Bug Fixing #1
+
+function createArray(number) {
+  let newArray = [];
+
+  for (let counter = 1; counter <= number; counter++) {
+    newArray.push(counter);
+  }
+
+  return newArray;
+}
+
+// 123 - Expressions Matter
+
+function expressionMatter(a, b, c) {
+  return Math.max(
+    ...[a + b + c, a * b * c, a * (b + c), (a + b) * c, a + b * c]
+  );
+}
+
+// 124 - Find Multiples of a Number
+
+function findMultiples(integer, limit) {
+  return [...Array(Math.floor(limit / integer)).keys()].map(
+    (i) => (i + 1) * integer
+  );
+}
+
+// 125 - Filter out the geese
+
+function gooseFilter(birds) {
+  const geese = [
+    "African",
+    "Roman Tufted",
+    "Toulouse",
+    "Pilgrim",
+    "Steinbacher",
+  ];
+
+  return birds.filter((bird) => !geese.includes(bird));
+}
+
+// 126 - Grasshopper - If/else syntax debug
+
+function checkAlive(health) {
+  return health > 0;
+}
+
+// 127 - Stringy Strings
+
+function stringy(size) {
+  return "10".repeat(size).slice(0, size);
+}
+
+// 128 - My head is at the wrong end!
+
+function fixTheMeerkat(arr) {
+  return arr.reverse();
+}
+
+// 129 - Short Long Short
+
+function solution(a, b) {
+  return a.length < b.length ? a + b + a : b + a + b;
+}
+
+// 130 - Super Duper Easy
+
+function problem(x) {
+  return typeof x === "number" ? x * 50 + 6 : "Error";
+}
+
+// 131 - Reverse List Order
+
+function reverseList(list) {
+  return list.reverse();
+}
+
+// 132 - Well of Ideas - Easy Version
+
+function well(x) {
+  const goodCount = x.filter((item) => item === "good").length;
+
+  return goodCount === 0
+    ? "Fail"
+    : goodCount > 2
+    ? "I smell a series!"
+    : "Publish!";
+}
+
+// 133 - 5 without numbers !!
+
+function unusualFive() {
+  return "hello".length;
+}
+
+// 134 - Lario and Muigi Pipe Problem
+
+function pipeFix(numbers) {
+  const min = Math.min(...numbers);
+  const max = Math.max(...numbers);
+  return [...Array(max - min + 1).keys()].map((i) => i + min);
+}
+
+// 135 - Vowel remover
+
+function shortcut(str) {
+  return str.replace(/[aeiou]/g, "");
+}
+
+// 136 - Training JS #1: create your first JS function and print "Hello World!"
+
+function helloWorld() {
+  const str = "Hello World!";
+  console.log(str);
+}
+
+// 137 - What's the real floor?
+
+function getRealFloor(n) {
+  return n > 0 && n < 13 ? n - 1 : n > 12 ? n - 2 : n;
+}
+
+// 138 - Basic variable assignment
+
+var a = "code";
+var b = "wa.rs";
+var name = a + b;
+
+// 139 - Name Shuffler
+
+function nameShuffler(str) {
+  return str.split(" ").reverse().join(" ");
+}
+
+// 140 - Get Nth Even Number
+
+function nthEven(n) {
+  return (n - 1) * 2;
 }
