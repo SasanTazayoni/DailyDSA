@@ -1044,3 +1044,539 @@ function nameShuffler(str) {
 function nthEven(n) {
   return (n - 1) * 2;
 }
+
+// 141 - Drink about
+
+function peopleWithAgeDrink(old) {
+  return old > 20
+    ? "drink whisky"
+    : old > 17
+    ? "drink beer"
+    : old > 13
+    ? "drink coke"
+    : "drink toddy";
+}
+
+// 142 - get character from ASCII Value
+
+function getChar(c) {
+  return String.fromCharCode(c);
+}
+
+// 143 - Exclamation marks series #1: Remove an exclamation mark from the end of string
+
+function remove(string) {
+  return string.endsWith("!") ? string.slice(0, -1) : string;
+}
+
+// 144 - Find the position!
+
+function position(letter) {
+  return `Position of alphabet: ${letter.charCodeAt(0) - 96}`;
+}
+
+// 145 - No zeros for heros
+
+function noBoringZeros(n) {
+  return n === 0 ? 0 : n.toString().replace(/0+$/, "") * 1;
+}
+
+// 146 - Merge two sorted arrays into one
+
+function mergeArrays(arr1, arr2) {
+  return [...new Set([...arr1, ...arr2])].sort((a, b) => a - b);
+}
+
+// 147 - A wolf in sheep's clothing
+
+function warnTheSheep(queue) {
+  const position = queue.length - queue.indexOf("wolf") - 1;
+  return position === 0
+    ? "Pls go away and stop eating my sheep"
+    : `Oi! Sheep number ${position}! You are about to be eaten by a wolf!`;
+}
+
+// 148 - The Wide-Mouthed frog!
+
+function mouthSize(animal) {
+  return animal.toLowerCase() === "alligator" ? "small" : "wide";
+}
+
+// 149 - Capitalization and Mutability
+
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1);
+}
+
+// 150 - Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
+
+function replace(s) {
+  return s.replace(/[aeiouAEIOU]/g, "!");
+}
+
+// 152 - Add Length
+
+function addLength(str) {
+  return str.split(" ").map((word) => `${word} ${word.length}`);
+}
+
+// 153 - Grasshopper - Basic Function Fixer
+
+function addFive(num) {
+  return num + 5;
+}
+
+// 154 - Bin to Decimal
+
+function binToDec(bin) {
+  return parseInt(bin, 2);
+}
+
+// 155 - Triple Trouble
+
+function tripleTrouble(one, two, three) {
+  return [...one].reduce(
+    (acc, char, index) => acc + char + two[index] + three[index],
+    ""
+  );
+}
+
+// 156 - Plural
+
+function plural(n) {
+  return n !== 1;
+}
+
+// 157 - Is this my tail?
+
+function correctTail(body, tail) {
+  return body.slice(-1) === tail;
+}
+
+// 158 - Hex to Decimal
+
+function hexToDec(hexString) {
+  return parseInt(hexString, 16);
+}
+
+// 159 - Generate range of integers
+
+function generateRange(start, stop, step) {
+  const range = [];
+
+  for (let i = start; i <= stop; i += step) {
+    range.push(i);
+  }
+
+  return range;
+}
+
+// 160 - Training JS #2: Basic data types--Number
+
+let v1 = 50,
+  v2 = 100,
+  v3 = 150,
+  v4 = 200,
+  v5 = 2,
+  v6 = 250;
+
+function equal1() {
+  let a = v1,
+    b = v1;
+  return a + b;
+}
+
+//Please refer to the example above to complete the following functions
+function equal2() {
+  let a = v3, //set number value to a
+    b = v1; //set number value to b
+  return a - b;
+}
+
+function equal3() {
+  let a = v1, //set number value to a
+    b = v5; //set number value to b
+  return a * b;
+}
+
+function equal4() {
+  let a = v4, //set number value to a
+    b = v5; //set number value to b
+  return a / b;
+}
+
+function equal5() {
+  let a = v2, //set number value to a
+    b = v4; //set number value to b
+  return a % b;
+}
+
+// 162 - Hello, Name or World!
+
+function hello(name) {
+  return name
+    ? `Hello, ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`
+    : "Hello, World!";
+}
+
+// 163 - 101 Dalmatians - squash the bugs, not the dogs!
+
+function howManyDalmatians(number) {
+  return number <= 10
+    ? "Hardly any"
+    : number <= 50
+    ? "More than a handful!"
+    : number === 101
+    ? "101 DALMATIANS!!!"
+    : "Woah that's a lot of dogs!";
+}
+
+// 164 - Enumerable Magic #25 - Take the First N Elements
+
+function take(arr, n) {
+  return arr.slice(0, n);
+}
+
+// 165 - FIXME: Replace all dots
+
+const replaceDots = function (str) {
+  return str.replace(/\./g, "-");
+};
+
+// 166 - Multiplication table for number
+
+function multiTable(number) {
+  return [...Array(10).keys()]
+    .map((i) => `${i + 1} * ${number} = ${number * (i + 1)}`)
+    .join("\n");
+}
+
+// 167 - Determine offspring sex based on genes XX and XY chromosomes
+
+function chromosomeCheck(sperm) {
+  return `Congratulations! You're going to have a ${
+    sperm[1] === "Y" ? "son" : "daughter"
+  }.`;
+}
+
+// 168 - Gravity Flip
+
+const flip = (d, a) => {
+  return a.sort((a, b) => (d === "R" ? a - b : b - a));
+};
+
+// 169 - Grasshopper - Debug
+
+function weatherInfo(temp) {
+  const celsius = (temp - 32) * (5 / 9);
+  return celsius <= 0
+    ? `${celsius} is freezing temperature`
+    : `${celsius} is above freezing temperature`;
+}
+
+// 170 - Grasshopper - Function syntax debugging
+
+function main(verb, noun) {
+  return verb + noun;
+}
+
+// 171 - String Templates - Bug Fixing #5
+
+function buildString(...template) {
+  return `I like ${template.join(", ")}!`;
+}
+
+// 172 - Welcome to the City
+
+function sayHello(name, city, state) {
+  return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}!`;
+}
+
+// 173 - Training JS #4: Basic data types--Array
+
+function getLength(arr) {
+  return arr.length;
+}
+function getFirst(arr) {
+  return arr[0];
+}
+function getLast(arr) {
+  return arr[arr.length - 1];
+}
+function pushElement(arr) {
+  const el = 1;
+  arr.push(el);
+
+  return arr;
+}
+function popElement(arr) {
+  arr.pop();
+  return arr;
+}
+
+// 174 - Fix your code before the garden dies!
+
+function rainAmount(mm) {
+  if (mm >= 40) {
+    return "Your plant has had more than enough water for today!";
+  } else {
+    return `You need to give your plant ${40 - mm}mm of water`;
+  }
+}
+
+// 175 - Grasshopper - Array Mean
+
+const findAverage = function (nums) {
+  return nums.reduce((acc, num) => acc + num, 0) / nums.length;
+};
+
+// 176 - Simple Fun #1: Seats in Theater
+
+function seatsInTheater(nCols, nRows, col, row) {
+  return (nCols - col + 1) * (nRows - row);
+}
+
+// 177 - Multiple of index
+
+function multipleOfIndex(array) {
+  return array.filter((item, index) =>
+    index === 0 ? item === 0 : item % index === 0
+  );
+}
+
+// 178 - String cleaning
+
+function stringClean(s) {
+  return s.replace(/\d/g, "");
+}
+
+// 179 - Holiday VIII - Duty Free
+
+function dutyFree(normPrice, discount, hol) {
+  return Math.floor(hol / (normPrice * (discount / 100)));
+}
+
+// 180 - Training JS #5: Basic data types--Object
+
+function animal(obj) {
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
+}
+
+// 181 - SpeedCode #2 - Array Madness
+
+function arrayMadness(a, b) {
+  return (
+    a.reduce((acc, num) => acc + num ** 2, 0) >
+    b.reduce((acc, num) => acc + num ** 3, 0)
+  );
+}
+
+// 182 - Return the day
+
+function whatday(num) {
+  return (
+    {
+      1: "Sunday",
+      2: "Monday",
+      3: "Tuesday",
+      4: "Wednesday",
+      5: "Thursday",
+      6: "Friday",
+      7: "Saturday",
+    }[num] || "Wrong, please enter a number between 1 and 7"
+  );
+}
+
+// 183 - Take the Derivative
+
+function derive(coefficient, exponent) {
+  return coefficient * exponent + "x^" + (exponent - 1);
+}
+
+// 184 - Find out whether the shape is a cube
+
+function cubeChecker(volume, side) {
+  return volume > 0 && side > 0 && side ** 3 === volume;
+}
+
+// 185 - Enumerable Magic - Does My List Include This?
+
+function include(arr, item) {
+  return arr.includes(item);
+}
+
+// 186 - How old will I be in 2099?
+
+function calculateAge(yearOfBirth, year) {
+  const age = year - yearOfBirth;
+
+  if (age > 0) {
+    return `You are ${age} year${age > 1 ? "s" : ""} old.`;
+  } else if (age < 0) {
+    return `You will be born in ${-age} year${-age > 1 ? "s" : ""}.`;
+  } else {
+    return "You were born this very year!";
+  }
+}
+
+// 187 - Find the Remainder
+
+function remainder(n, m) {
+  return n > m ? n % m : m % n;
+}
+
+// 188 - Dollars and Cents
+
+function formatMoney(amount) {
+  return `$${amount.toFixed(2)}`;
+}
+
+// 189 - Surface Area and Volume of a Box
+
+function getSize(width, height, depth) {
+  return [
+    2 * (width * height + width * depth + height * depth),
+    width * height * depth,
+  ];
+}
+
+// 190 - L1: Bartender, drinks!
+
+function getDrinkByProfession(param) {
+  return (
+    {
+      jabroni: "Patron Tequila",
+      "school counselor": "Anything with Alcohol",
+      programmer: "Hipster Craft Beer",
+      "bike gang member": "Moonshine",
+      politician: "Your tax dollars",
+      rapper: "Cristal",
+    }[param.toLowerCase()] || "Beer"
+  );
+}
+
+// 191 - How many lightsabers do you own?
+
+function howManyLightsabersDoYouOwn(name) {
+  return name === "Zach" ? 18 : 0;
+}
+
+// 192 - Alan Partridge II - Apple Turnover
+
+function apple(x) {
+  return x ** 2 > 1000
+    ? "It's hotter than the sun!!"
+    : "Help yourself to a honeycomb Yorkie for the glovebox.";
+}
+
+// 193 - Sum of differences in array
+
+function sumOfDifferences(arr) {
+  return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+}
+
+// 194 - Do you speak "English"?
+
+function spEng(sentence) {
+  return /english/i.test(sentence);
+}
+
+// 195 - Sum of Multiples
+
+function sumMul(n, m) {
+  let sum = 0;
+
+  for (let i = n; i < m; i += n) {
+    sum += i;
+  }
+
+  return sum || "INVALID";
+}
+
+// 196 - Regular Ball Super Ball
+
+class Ball {
+  constructor(ballType = "regular") {
+    this.ballType = ballType;
+  }
+}
+
+// 197 - Training JS #3: Basic data types--String
+
+var a1 = "A",
+  a2 = "a",
+  b1 = "B",
+  b2 = "b",
+  c1 = "C",
+  c2 = "c",
+  d1 = "D",
+  d2 = "d",
+  e1 = "E",
+  e2 = "e",
+  n1 = "N",
+  n2 = "n";
+function Dad() {
+  //select some variable to combine "Dad"
+  return d1 + a2 + d2;
+}
+function Bee() {
+  //select some variable to combine "Bee"
+  return b1 + e2 + e2;
+}
+function banana() {
+  //select some variable to combine "banana"
+  return b2 + a2 + n2 + a2 + n2 + a2;
+}
+
+//answer some questions if you finished works above
+function answer1() {
+  //the answer should be "yes" or "no"
+  return "no";
+}
+function answer2() {
+  //the answer should be "yes" or "no"
+  return "no";
+}
+function answer3() {
+  //the answer should be "yes" or "no"
+  return "yes";
+}
+
+// 198 - Fundamentals: Return
+
+function add(a, b) {
+  return a + b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function mod(a, b) {
+  return a % b;
+}
+
+function exponent(a, b) {
+  return a ** b;
+}
+
+function subt(a, b) {
+  return a - b;
+}
+
+// 199 - No Loops 2 - You only need one
+
+function check(a, x) {
+  return a.includes(x);
+}
+
+// 200 - Remove First and Last Character Part Two
+
+function array(string) {
+  const elements = string.split(",");
+  return elements.length <= 2 ? null : elements.slice(1, -1).join(" ");
+}
