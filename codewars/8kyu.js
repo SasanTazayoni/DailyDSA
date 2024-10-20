@@ -45,7 +45,7 @@ function solution(str) {
   return str.split("").reverse().join("");
 }
 
-// 7 - Converta Number to a String!
+// 7 - Convert a Number to a String!
 
 function numberToString(num) {
   return num.toString();
