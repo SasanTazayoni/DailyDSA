@@ -82,3 +82,38 @@ function XO(str) {
 
   return counts.x === counts.o;
 }
+
+// 11 - Jaden Casing Strings
+
+String.prototype.toJadenCase = function () {
+  return this.split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+};
+
+// 12 - Shortest Word
+
+function findShort(s) {
+  return Math.min(...s.split(" ").map((s) => s.length));
+}
+
+// 13 - Complementary DNA
+
+function dnaStrand(dna) {
+  return dna
+    .split("")
+    .map((char) => ({ A: "T", T: "A", C: "G", G: "C" }[char]))
+    .join("");
+}
+
+// 14 - Credit Card Mask
+
+function maskify(cc) {
+  return cc.length <= 4 ? cc : "#".repeat(cc.length - 4) + cc.slice(-4);
+}
+
+// 15 - Sum of two lowest positive integers
+
+function sumTwoSmallestNumbers(numbers) {
+  return numbers.sort((a, b) => a - b), numbers[0] + numbers[1];
+}
