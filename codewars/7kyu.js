@@ -117,3 +117,35 @@ function maskify(cc) {
 function sumTwoSmallestNumbers(numbers) {
   return numbers.sort((a, b) => a - b), numbers[0] + numbers[1];
 }
+
+// 16 - Beginner Series #3 Sum of Numbers
+
+function getSum(a, b) {
+  return ((Math.abs(a - b) + 1) * (a + b)) / 2;
+}
+
+// 17 - Friend or Foe?
+
+function friend(friends) {
+  return friends.filter((friend) => friend.length === 4);
+}
+
+// 18 - Two to One
+
+function longest(s1, s2) {
+  return Array.from(new Set(s1 + s2))
+    .sort()
+    .join("");
+}
+
+// 19 - Categorize New Member
+
+function openOrSenior(data) {
+  return data.map((item) => (item[0] > 54 && item[1] > 7 ? "Senior" : "Open"));
+}
+
+// 20 - Find the next perfect square!
+
+function findNextSquare(sq) {
+  return Math.sqrt(sq) % 1 === 0 ? (Math.sqrt(sq) + 1) ** 2 : -1;
+}
