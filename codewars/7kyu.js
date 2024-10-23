@@ -149,3 +149,33 @@ function openOrSenior(data) {
 function findNextSquare(sq) {
   return Math.sqrt(sq) % 1 === 0 ? (Math.sqrt(sq) + 1) ** 2 : -1;
 }
+
+// 21 - Printer Errors
+
+function printerError(s) {
+  return `${s.split("").filter((char) => char > "m").length}/${s.length}`;
+}
+
+// 22 - String ends with?
+
+function solution(str, ending) {
+  return str.endsWith(ending);
+}
+
+// 23 - Binary Addition
+
+function addBinary(a, b) {
+  return (a + b).toString(2);
+}
+
+// 24 - Is this a triangle?
+
+function isTriangle(a, b, c) {
+  return a + b > c && a + c > b && b + c > a;
+}
+
+// 25 - Sum of odd numbers
+
+function rowSumOddNumbers(n) {
+  return n ** 3;
+}
