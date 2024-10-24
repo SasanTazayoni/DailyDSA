@@ -179,3 +179,38 @@ function isTriangle(a, b, c) {
 function rowSumOddNumbers(n) {
   return n ** 3;
 }
+
+// 26 - Ones and Zeros
+
+const binaryArrayToNumber = (arr) => {
+  return parseInt(arr.join(""), 2);
+};
+
+// 27 - Number of People in the Bus
+
+const number = function (busStops) {
+  return busStops.reduce((total, stop) => total + stop[0] - stop[1], 0);
+};
+
+// 28 - Odd or Even?
+
+function oddOrEven(array) {
+  return array.reduce((acc, item) => acc + item, 0) % 2 === 0 ? "even" : "odd";
+}
+
+// 29 - Reverse words
+
+function reverseWords(str) {
+  return str
+    .split(" ")
+    .map((word) => word.split("").reverse().join(""))
+    .join(" ");
+}
+
+// 30 - Find the divisors!
+
+function divisors(integer) {
+  const potentialDivisors = [...Array(integer - 1).keys()].slice(2);
+  const divisors = potentialDivisors.filter((i) => integer % i === 0);
+  return divisors.length > 0 ? divisors : `${integer} is prime`;
+}
