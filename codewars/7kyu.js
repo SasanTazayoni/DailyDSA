@@ -214,3 +214,37 @@ function divisors(integer) {
   const divisors = potentialDivisors.filter((i) => integer % i === 0);
   return divisors.length > 0 ? divisors : `${integer} is prime`;
 }
+
+// 31 - Sum of the first nth term of Series
+
+function SeriesSum(n) {
+  return [...Array(n).keys()]
+    .map((i) => 1 / (1 + i * 3))
+    .reduce((sum, value) => sum + value, 0)
+    .toFixed(2);
+}
+
+// 32 - Remove the minimum
+
+function removeSmallest(numbers) {
+  const index = numbers.indexOf(Math.min(...numbers));
+  return numbers.slice(0, index).concat(numbers.slice(index + 1));
+}
+
+// 33 - Testing 1-2-3
+
+const num = function (array) {
+  return array.map((item, index) => `${index + 1}: ${item}`);
+};
+
+// 34 - The highest profit wins!
+
+function minMax(arr) {
+  return [Math.min(...arr), Math.max(...arr)];
+}
+
+// 35 - Find the stray number
+
+function stray(numbers) {
+  return numbers.reduce((a, b) => a ^ b);
+}
