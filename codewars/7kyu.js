@@ -248,3 +248,13 @@ function minMax(arr) {
 function stray(numbers) {
   return numbers.reduce((a, b) => a ^ b);
 }
+
+// 36 Don't give me five!
+
+function dontGiveMeFive(start, end) {
+  const newArray = [...Array(end - start + 1).keys()]
+    .map((i) => i + start)
+    .filter((num) => !num.toString().includes("5"));
+
+  return newArray.length;
+}
