@@ -1580,3 +1580,11 @@ function array(string) {
   const elements = string.split(",");
   return elements.length <= 2 ? null : elements.slice(1, -1).join(" ");
 }
+
+// 201 - Find the Difference in Age between Oldest and Youngest Family Members
+
+function differenceInAges(ages) {
+  const sortedAges = ages.sort((a, b) => a - b);
+  const difference = sortedAges[sortedAges.length - 1] - sortedAges[0];
+  return [sortedAges[0], sortedAges[sortedAges.length - 1], difference];
+}
