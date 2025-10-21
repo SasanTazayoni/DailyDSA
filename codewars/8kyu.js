@@ -1588,3 +1588,9 @@ function differenceInAges(ages) {
   const difference = sortedAges[sortedAges.length - 1] - sortedAges[0];
   return [sortedAges[0], sortedAges[sortedAges.length - 1], difference];
 }
+
+// 202 - USD => CNY
+
+function usdcny(usd) {
+  return (usd * 6.75).toFixed(2) + " Chinese Yuan";
+}
