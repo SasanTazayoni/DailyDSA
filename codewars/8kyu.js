@@ -1594,3 +1594,9 @@ function differenceInAges(ages) {
 function usdcny(usd) {
   return (usd * 6.75).toFixed(2) + " Chinese Yuan";
 }
+
+// 203 - Closest elevator
+
+function elevator(left, right, call) {
+  return Math.abs(call - right) <= Math.abs(call - left) ? "right" : "left";
+}
