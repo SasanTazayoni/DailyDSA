@@ -1600,3 +1600,9 @@ function usdcny(usd) {
 function elevator(left, right, call) {
   return Math.abs(call - right) <= Math.abs(call - left) ? "right" : "left";
 }
+
+// 204 Formatting decimal places #0
+
+function twoDecimalPlaces(n) {
+  return Math.round(n * 100) / 100;
+}
