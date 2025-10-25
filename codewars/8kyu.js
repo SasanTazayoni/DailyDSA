@@ -1606,3 +1606,9 @@ function elevator(left, right, call) {
 function twoDecimalPlaces(n) {
   return Math.round(n * 100) / 100;
 }
+
+// 205 Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+
+function remove(string) {
+  return string.replace(/[!\.]+$/, "");
+}
