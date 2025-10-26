@@ -1612,3 +1612,13 @@ function twoDecimalPlaces(n) {
 function remove(string) {
   return string.replace(/[!\.]+$/, "");
 }
+
+// 206 How many stairs will Suzuki climb in 20 years?
+
+function stairsIn20(s) {
+  const total = s
+    .map((day) => day.reduce((sum, steps) => sum + steps, 0))
+    .reduce((sum, dayTotal) => sum + dayTotal, 0);
+
+  return total * 20;
+}
