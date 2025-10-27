@@ -1622,3 +1622,16 @@ function stairsIn20(s) {
 
   return total * 20;
 }
+
+// 207 Define a card suit
+
+function defineSuit(card) {
+  const suits = {
+    "♣": "clubs",
+    "♦": "diamonds",
+    "♥": "hearts",
+    "♠": "spades",
+  };
+
+  return suits[card.slice(-1)];
+}
