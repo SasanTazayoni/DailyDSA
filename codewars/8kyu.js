@@ -1635,3 +1635,9 @@ function defineSuit(card) {
 
   return suits[card.slice(-1)];
 }
+
+// 208 Multiply the number
+
+function multiply(number) {
+  return number * 5 ** Math.abs(number).toString().length;
+}
