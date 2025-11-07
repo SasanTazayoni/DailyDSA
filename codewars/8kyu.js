@@ -1647,3 +1647,15 @@ function multiply(number) {
 function sixToast(num) {
   return num >= 6 ? num - 6 : 6 - num;
 }
+
+// 210 Check same case
+
+function sameCase(a, b) {
+  const isLetter = (c) => /[a-zA-Z]/.test(c);
+  if (!isLetter(a) || !isLetter(b)) return -1;
+
+  const bothLower = a === a.toLowerCase() && b === b.toLowerCase();
+  const bothUpper = a === a.toUpperCase() && b === b.toUpperCase();
+
+  return bothLower || bothUpper ? 1 : 0;
+}
