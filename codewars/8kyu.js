@@ -1659,3 +1659,9 @@ function sameCase(a, b) {
 
   return bothLower || bothUpper ? 1 : 0;
 }
+
+// 211 Remove the time
+
+function shortenToDate(longDate) {
+  return longDate.split(",")[0];
+}
