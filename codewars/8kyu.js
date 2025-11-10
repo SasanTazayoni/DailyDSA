@@ -1665,3 +1665,10 @@ function sameCase(a, b) {
 function shortenToDate(longDate) {
   return longDate.split(",")[0];
 }
+
+// 212 Is there a vowel in there?
+
+function isVow(a) {
+  const vowels = { 97: "a", 101: "e", 105: "i", 111: "o", 117: "u" };
+  return a.map((num) => (vowels[num] ? vowels[num] : num));
+}
