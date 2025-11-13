@@ -1672,3 +1672,9 @@ function isVow(a) {
   const vowels = { 97: "a", 101: "e", 105: "i", 111: "o", 117: "u" };
   return a.map((num) => (vowels[num] ? vowels[num] : num));
 }
+
+// 213 Who is going to pay for the wall?
+
+function whoIsPaying(name) {
+  return name.length < 3 ? [name] : [name, name.split("").slice(0, 2).join("")];
+}
