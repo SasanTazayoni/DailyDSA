@@ -1678,3 +1678,13 @@ function isVow(a) {
 function whoIsPaying(name) {
   return name.length < 3 ? [name] : [name, name.split("").slice(0, 2).join("")];
 }
+
+// 214 Name on billboard
+
+function billboard(name, price = 30) {
+  let total = 0;
+  for (let i = 0; i < name.length; i++) {
+    total += price;
+  }
+  return total;
+}
