@@ -1688,3 +1688,25 @@ function billboard(name, price = 30) {
   }
   return total;
 }
+
+// 215 simple calculator
+
+function calculator(a, b, sign) {
+  if (
+    typeof a !== "number" ||
+    typeof b !== "number" ||
+    !["+", "-", "*", "/"].includes(sign)
+  )
+    return "unknown value";
+
+  switch (sign) {
+    case "+":
+      return a + b;
+    case "-":
+      return a - b;
+    case "*":
+      return a * b;
+    case "/":
+      return a / b;
+  }
+}
