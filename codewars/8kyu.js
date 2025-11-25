@@ -1710,3 +1710,15 @@ function calculator(a, b, sign) {
       return a / b;
   }
 }
+
+// 216 Training JS #10: loop statement --for
+
+function pickIt(arr) {
+  let odd = [],
+    even = [];
+  for (let i = 0; i < arr.length; i++) {
+    return i % 2 === 1 ? odd.push(i) : even.push(i);
+  }
+
+  return [odd, even];
+}
