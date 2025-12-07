@@ -1722,3 +1722,9 @@ function pickIt(arr) {
 
   return [odd, even];
 }
+
+// 217 CSV representation of array
+
+function toCsvText(array) {
+  return array.map((row) => row.join(",")).join("\n");
+}
