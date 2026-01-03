@@ -1728,3 +1728,10 @@ function pickIt(arr) {
 function toCsvText(array) {
   return array.map((row) => row.join(",")).join("\n");
 }
+
+// Duck Duck Goose
+
+function duckDuckGoose(players, goose) {
+  const index = (goose - 1) % players.length;
+  return players[index].name;
+}
