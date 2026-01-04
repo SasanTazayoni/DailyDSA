@@ -1729,9 +1729,18 @@ function toCsvText(array) {
   return array.map((row) => row.join(",")).join("\n");
 }
 
-// Duck Duck Goose
+// 218 Duck Duck Goose
 
 function duckDuckGoose(players, goose) {
   const index = (goose - 1) % players.length;
   return players[index].name;
+}
+
+// 219 Contamination #1 -String-
+
+function contamination(text, char) {
+  return text
+    .split("")
+    .map(() => char)
+    .join("");
 }
