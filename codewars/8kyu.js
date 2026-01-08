@@ -1744,3 +1744,9 @@ function contamination(text, char) {
     .map(() => char)
     .join("");
 }
+
+// 220 Pillars
+
+function pillars(numPill, dist, width) {
+  return (numPill - 1) * dist * 100 + Math.max(0, numPill - 2) * width;
+}
