@@ -1581,7 +1581,7 @@ function array(string) {
   return elements.length <= 2 ? null : elements.slice(1, -1).join(" ");
 }
 
-// 201 - Find the Difference in Age between Oldest and Youngest Family Members
+// 201 Find the Difference in Age between Oldest and Youngest Family Members
 
 function differenceInAges(ages) {
   const sortedAges = ages.sort((a, b) => a - b);
@@ -1589,13 +1589,13 @@ function differenceInAges(ages) {
   return [sortedAges[0], sortedAges[sortedAges.length - 1], difference];
 }
 
-// 202 - USD => CNY
+// 202 USD => CNY
 
 function usdcny(usd) {
   return (usd * 6.75).toFixed(2) + " Chinese Yuan";
 }
 
-// 203 - Closest elevator
+// 203 Closest elevator
 
 function elevator(left, right, call) {
   return Math.abs(call - right) <= Math.abs(call - left) ? "right" : "left";
@@ -1749,4 +1749,10 @@ function contamination(text, char) {
 
 function pillars(numPill, dist, width) {
   return (numPill - 1) * dist * 100 + Math.max(0, numPill - 2) * width;
+}
+
+// 221 Regex count lowercase letters
+
+function lowercaseCount(str) {
+  return (str.match(/[a-z]/g) || []).length;
 }
