@@ -1756,3 +1756,17 @@ function pillars(numPill, dist, width) {
 function lowercaseCount(str) {
   return (str.match(/[a-z]/g) || []).length;
 }
+
+// 222 Who ate the cookie?
+
+function cookie(x) {
+  return (
+    "Who ate the last cookie? It was " +
+    (typeof x === "string"
+      ? "Zach"
+      : typeof x === "number"
+      ? "Monica"
+      : "the dog") +
+    "!"
+  );
+}
