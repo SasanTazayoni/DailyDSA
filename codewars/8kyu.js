@@ -1780,3 +1780,9 @@ function remove(s, n) {
 
   return s;
 }
+
+// 224 Area of a Square
+
+function squareArea(A) {
+  return (A / ((1 / 4) * 2 * Math.PI)) ** 2;
+}
